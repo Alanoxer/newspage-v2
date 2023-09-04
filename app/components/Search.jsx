@@ -1,12 +1,17 @@
 'use client'
 import { useState } from "react"
 import { useLocation } from "wouter";
+import { useEffect } from "react";
 
 
 
 const Search = () =>{
-    const [keyword, setKeyword] = useState('') 
-    const [path, pushlocation] = useLocation()
+
+  const [keyword, setKeyword] = useState('') 
+  const [path, pushlocation] = useLocation()
+
+    useEffect(()=>{
+    
     
     const handleSubmit = ()=>{
       
@@ -45,6 +50,8 @@ const Search = () =>{
            
         </form> 
     )
+    },[])
+    
 }
 
 export default Search
