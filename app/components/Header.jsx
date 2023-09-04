@@ -16,11 +16,11 @@ const Header = ()=>{
       </span>
    </div>
 
-   <div className=" static mx-auto ml-30
+   {/* <div className=" static mx-auto ml-30
    
    ">
       <Search />
-   </div>
+   </div> */}
 
    <div className="block lg:hidden pr-4">
       <button id="nav-toggle" className="flex items-center px-3 py-2 border rounded text-red-500 border-red-500 hover:text-red-700 hover:border-red-700 appearance-none focus:outline-none">
