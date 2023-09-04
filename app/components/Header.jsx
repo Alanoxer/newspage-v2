@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Search from "./Search"
+
 
 
 const Header = ()=>{

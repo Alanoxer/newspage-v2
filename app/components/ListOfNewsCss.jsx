@@ -5,7 +5,8 @@ import Link from "next/link"
 const ListOfNewsCss = ({urlToImage, url, title, publishedAt, author, description, source})=>{
     return (
         
-      <div className="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
+      <div className="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4
+      mb-20 ">
         <img
             src={urlToImage}/>
         <p className="bg-red-500 flex items-center leading-none text-sm font-medium text-gray-50 pt-1.5 pr-3 pb-1.5 pl-3
