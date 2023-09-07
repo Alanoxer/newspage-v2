@@ -2,7 +2,7 @@ const HomePageCss = ({image, title, author, published_at})=>{
 
     return(
 
-    <div className="text-gray-900 pt-12 pr-0 pb-14 pl-0 bg-gray-400">
+    <div className=" pt-12 pr-0 pb-14 pl-0 bg-slate-900">
   <div className="w-full pt-4 pr-5 pb-6 pl-5 mt-0 mr-auto mb-0 ml-auto space-y-5 sm:py-8 md:py-12 sm:space-y-8 md:space-y-16
       max-w-7xl">
     <div className="flex flex-col items-center sm:px-5 md:flex-row">
