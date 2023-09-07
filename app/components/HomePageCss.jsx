@@ -1,8 +1,10 @@
-const HomePageCss = ({image, title, author, published_at})=>{
+import Link from "next/link"
+
+const HomePageCss = ({image, title, author, published_at,url})=>{
 
     return(
 
-    <div className=" pt-12 pr-0 pb-14 pl-0 bg-slate-900">
+    <div className=" pt-12 pr-0 pb-14 pl-0 bg-slate-900 border-b-2 border-gray-400">
   <div className="w-full pt-4 pr-5 pb-6 pl-5 mt-0 mr-auto mb-0 ml-auto space-y-5 sm:py-8 md:py-12 sm:space-y-8 md:space-y-16
       max-w-7xl">
     <div className="flex flex-col items-center sm:px-5 md:flex-row">
@@ -21,10 +23,10 @@ const HomePageCss = ({image, title, author, published_at})=>{
             <p className="inline text-xs font-medium">Noticia Destacada</p>
           </div>
           <div>
-          <p 
+          <Link href={url} 
            className="text-4xl font-bold leading-none lg:text-5xl xl:text-6xl">
             {title}
-            </p>
+            </Link>
             </div>
           <div className="pt-2 pr-0 pb-0 pl-0">
             <p className="text-sm font-medium inline">author:</p>

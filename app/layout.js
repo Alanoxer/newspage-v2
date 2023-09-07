@@ -27,7 +27,7 @@ export default function RootLayout({children}){
         <DashBoard/>
 
 
-        <main className='bg-gray-800 mt-0'
+        <main className='bg-slate-900 mt-0'
         >{children}</main>
         </div>
         
