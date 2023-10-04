@@ -11,7 +11,7 @@ export default function New({params}){
             <ListOfNews keyword={keyword}/>
         </div>
 
-     </>  
+    </>  
 
     )
 }
