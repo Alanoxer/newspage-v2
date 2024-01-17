@@ -2,17 +2,20 @@
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 
+
 const Search = ()=>{
     const [keyword, setKeyword] = useState("")
     const router = useRouter()
 
+
     const handleSubmit = evt=>{
         evt.preventDefault()
-        router.push(`/news/${keyword}`)
+        router.push(`/news/${keyword}/1`)
     }
 
-    const handleChange = evt=>{
+    const handleChange = (evt)=>{
         setKeyword(evt.target.value)
+
     }
 
     return(

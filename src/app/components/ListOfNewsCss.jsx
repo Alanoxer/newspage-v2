@@ -14,7 +14,7 @@ const ListOfNewsCss = ({urlToImage, url, title, publishedAt, author, description
         <Link href={url} className="text-lg font-bold sm:text-xl md:text-2xl hover:to-blue-700 ">{title}</Link>
         <p className="text-sm text-white">{description}</p>
         <div className="pt-2 pr-0 pb-0 pl-0">
-          <a className="inline text-xs font-medium mt-0 mr-1 mb-0 ml-0 underline">author: {author}</a>
+          <p className="inline text-xs font-medium mt-0 mr-1 mb-0 ml-0 underline">author: {author}</p>
           <p className="inline text-xs font-medium mt-0 mr-1 mb-0 ml-1">· {publishedAt} ·</p>
           
         </div>

@@ -1,13 +1,16 @@
 import ListOfNewsCss from "./ListOfNewsCss"
 
+const { API_KEY } = process.env
 
-const apiKey = '2e4d34f6e8054376a1a94c3a459c3a6f'
 
-const ListOfNews = async ({keyword})=>{
 
-  const api = `http://newsapi.org/v2/everything?apikey=${apiKey}
+
+const ListOfNews = async ({keyword, pagination})=>{
+
+  const api = `http://newsapi.org/v2/everything?apikey=${API_KEY}
   &q=${keyword}
   &pageSize=6
+  &page=${pagination}
  
  `
 
