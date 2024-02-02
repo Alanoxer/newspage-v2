@@ -20,7 +20,7 @@ export default function Pagination(){
     
     
 
-    return (<>
+    if(params.keyword || params.pagination)return (<>
         
         <div className=" bg-slate-900 flex items-center justify-center h-28">
     <div className="max-w-full md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto bg-red-500 p-6 rounded-lg shadow-sm">
@@ -54,4 +54,5 @@ export default function Pagination(){
 
             </>
     )
+    else return null
 }

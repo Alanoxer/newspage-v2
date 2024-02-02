@@ -25,7 +25,10 @@ export default function RootLayout({ children }) {
       </Head>
 
       <body>
-        <Header />
+        <Providers>
+          <Header />
+        </Providers>
+
         <div className="flex mt-13 ">
           <DashBoard />
 

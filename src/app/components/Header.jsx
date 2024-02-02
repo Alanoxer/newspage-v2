@@ -1,9 +1,13 @@
+"use client"
 import Link from "next/link"
 import Search from "./Search"
+import { useSession, signOut } from "next-auth/react";
 
 
 
 const Header = ()=>{
+   const { status } = useSession();
+
    return(<>
   <nav id="header" className="fixed w-full z-30 top-0 text-white  bg-red-500 m-100 mb-5" >
 
@@ -23,29 +27,46 @@ const Header = ()=>{
       <Search />
    </div>
 
-   <div className="block lg:hidden pr-4">
-      <button id="nav-toggle" className="flex items-center px-3 py-2 border rounded text-white border-white hover:text-red-700 hover:border-red-700 appearance-none focus:outline-none">
-         <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-         </svg>
-      </button>
-   </div>
+   { 
+ status === "authenticated" ?  <ul className="flex flex-col mt-4 -mx-4 pt-4 border-t md:flex-row md:items-center md:mx-0 md:ml-auto md:mt-0 md:pt-0 md:border-0">
+  <li>
+  <button>
+    <Link href={"/profile"}
+      className=" bg-gradient-to-r from-purple-600 to-purple-700 text-white
+       p-2 rounded-md mr-8"
+      > 
+    profile
+      </Link>
+    </button>
+  </li>
+  <li>
+    <button onClick={()=>{signOut();router.refresh()}}
+    className="bg-gradient-to-r from-purple-600 to-purple-700 text-white
+    p-2 rounded-md">Sign out
+    </button>
+  </li>
+</ul>
+                            : 
+  <ul className="flex flex-col mt-4 -mx-4 pt-4 border-t md:flex-row md:items-center md:mx-0 md:ml-auto md:mt-0 md:pt-0 md:border-0">
+<li>
+<Link href={"/login"}
+      className=" bg-gradient-to-r from-purple-600 to-purple-700 text-white
+       p-2 rounded-md mr-4 "
+      > 
+    Login
+      </Link>
+</li>
+<li>
+<Link href={"/register"}
+      className=" bg-gradient-to-r from-purple-600 to-purple-700 text-white
+       p-2 rounded-md "
+      > 
+    Register
+      </Link>
+</li>
+</ul>
 
-   <div className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden  mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
-      <ul className="list-reset lg:flex justify-end flex-1 items-center">
-         {/* <li className="mr-3">
-            <Link className="inline-block py-2 px-4 text-black font-bold no-underline" href="/about">About</Link>
-         </li> */}
-         <li className="mr-3">
-            <a className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/login">Login</a>
-         </li>
-         <li className="mr-3">
-            <a className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/register">Register</a>
-         </li>
-      </ul>
-      <button id="navAction" className="mx-auto lg:mx-0 hover:underline bg-red-500 text-white font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75">Config</button>
-   </div>
+}
 </div>
 
 <hr className="border-b border-red-500 opacity-75 my-0 py-0" />
