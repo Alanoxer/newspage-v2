@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link"
 import { useParams } from "next/navigation"
 
@@ -48,7 +49,7 @@ const params = useParams()
             </Link>
         </aside>
     </>)
-    
+
     else return null
 }
 

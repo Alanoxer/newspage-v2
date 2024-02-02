@@ -11,13 +11,6 @@ export default function Pagination(){
 
     const page = Number(params.pagination)
     
-    console.log( page)
-
-    const onPage = ()=>{
-        
-    
-    }
-    
     
 
     if(params.keyword || params.pagination)return (<>
