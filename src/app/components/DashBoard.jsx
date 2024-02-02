@@ -1,8 +1,9 @@
 import Link from "next/link"
+import { useParams } from "next/navigation"
 
 const DashBoard = ()=>{
-
-    return (<>
+const params = useParams()
+    if(params.keyword || params.pagination)return (<>
     <aside className="flex w-72 flex-col space-y-2 border-r-2 border-red-500 bg-black p-2 pt-20" style={{height: 90.5}}
             x-show="asideOpen">
             <Link href="/news/Deportes/1" className="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-red-600">
@@ -46,6 +47,7 @@ const DashBoard = ()=>{
             </Link>
         </aside>
     </>)
+    else return null
 }
 
 export default DashBoard
