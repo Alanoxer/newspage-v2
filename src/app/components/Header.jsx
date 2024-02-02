@@ -32,7 +32,7 @@ const Header = ()=>{
   <li>
   <button>
     <Link href={"/profile"}
-      className=" bg-gradient-to-r from-purple-600 to-purple-700 text-white
+      className=" bg-gradient-to-r from-red-600 to-red-700 text-white
        p-2 rounded-md mr-8"
       > 
     profile
@@ -41,7 +41,7 @@ const Header = ()=>{
   </li>
   <li>
     <button onClick={()=>{signOut();router.refresh()}}
-    className="bg-gradient-to-r from-purple-600 to-purple-700 text-white
+    className="bg-gradient-to-r from-red-600 to-red-700 text-white
     p-2 rounded-md">Sign out
     </button>
   </li>
@@ -50,7 +50,7 @@ const Header = ()=>{
   <ul className="flex flex-col mt-4 -mx-4 pt-4 border-t md:flex-row md:items-center md:mx-0 md:ml-auto md:mt-0 md:pt-0 md:border-0">
 <li>
 <Link href={"/login"}
-      className=" bg-gradient-to-r from-purple-600 to-purple-700 text-white
+      className=" bg-gradient-to-r from-red-600 to-red-700 text-white
        p-2 rounded-md mr-4 "
       > 
     Login
@@ -58,7 +58,7 @@ const Header = ()=>{
 </li>
 <li>
 <Link href={"/register"}
-      className=" bg-gradient-to-r from-purple-600 to-purple-700 text-white
+      className=" bg-gradient-to-r from-red-600 to-red-700 text-white
        p-2 rounded-md "
       > 
     Register
