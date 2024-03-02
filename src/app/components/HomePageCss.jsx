@@ -49,10 +49,10 @@ const HomePageCss = ({image, title, author, published_at,url})=>{
       </div>
       
       <div className="w-full md:w-1/2">
-        <div className="block">
+        <div className="w-full ">
         <img 
                     
-                    className="object-fit: contain; h-64 w-full md:h-full md:w-48 "
+                    className=" h-64 w-full md:h-full md:w-48 "
                     src={image}
                     alt={title}/>
            

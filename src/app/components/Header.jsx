@@ -9,7 +9,7 @@ const Header = ()=>{
    const { status } = useSession();
 
    return(<>
-  <nav id="header" className="fixed w-full z-30 top-0 text-white  bg-red-500 m-100 mb-5" >
+  <nav id="header" className="fixed w-full z-30 top-0 text-white  bg-red-600 m-100 mb-5" >
 
    
 
