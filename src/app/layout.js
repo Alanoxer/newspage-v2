@@ -29,13 +29,10 @@ export default function RootLayout({ children }) {
           <Header />
         </Providers>
 
-        <div className="flex mt-13 ">
-          <DashBoard />
+        <main className=" mt-0">
+          <Providers>{children}</Providers>
+        </main>
 
-          <main className="bg-slate-900 mt-0">
-            <Providers>{children}</Providers>
-          </main>
-        </div>
         <Pagination />
 
         <Footer />

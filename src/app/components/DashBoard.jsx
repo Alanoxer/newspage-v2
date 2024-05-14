@@ -9,9 +9,9 @@ const pathName = usePathname()
 
 
     if(params.keyword || params.pagination || pathName === "/") return (<>
-    <aside className="flex w-72 flex-col space-y-2 border-r-2 border-red-500 bg-black p-2 pt-20" style={{height: 90.5}}
+    <aside className="flex w-32 flex-col space-y-2 border-r-2 border-b-20 border-red-500 bg-slate-200 p-2" style={{height: 60}}
             x-show="asideOpen">
-            <Link href="/news/Deportes/1" className="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-red-600">
+            <Link href="/news/Deportes/1" className="flex items-center space-x-1 rounded-md px-2 py-2 mt-32 hover:bg-gray-100 hover:text-red-600">
                 <span className="text-2xl"><i className="bx bx-home"></i></span>
                 <span>Deportes</span>
             </Link>

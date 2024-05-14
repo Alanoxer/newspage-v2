@@ -4,9 +4,9 @@ const HomePageCss = ({image, title, author, published_at,url})=>{
 
     return(
 
-    <div className=" pt-12 pr-0 pb-14 pl-0 bg-slate-900 border-b-2 border-gray-400">
+    <div className=" ml-32 pr-0 pb-14 pl-0 bg-slate-900 border-l-2 border-gray-400">
 
-  <div className="w-full pt-4 pr-5 pb-6 pl-5 mt-0 mr-auto mb-0 ml-auto space-y-5 sm:py-8 md:py-12 sm:space-y-8 md:space-y-16
+  <div className=" pt-4 pr-5 pb-6 pl-5 mt-0 mr-auto mb-0 ml-auto space-y-5 sm:py-8 md:py-12 sm:space-y-8 md:space-y-16
       max-w-7xl">
 
     <div className="flex flex-col items-center sm:px-5 md:flex-row">
@@ -32,11 +32,11 @@ const HomePageCss = ({image, title, author, published_at,url})=>{
           </div>
 
           <div>
-          <Link href={url} 
-           className="text-4xl font-bold leading-none lg:text-5xl xl:text-6xl">
-            {title}
+            <Link href={url} 
+            className="text-4xl font-bold leading-none lg:text-5xl xl:text-6xl">
+              {title}
             </Link>
-            </div>
+          </div>
 
           <div className="pt-2 pr-0 pb-0 pl-0">
             <p className="text-sm font-medium inline">author:</p>
@@ -48,17 +48,12 @@ const HomePageCss = ({image, title, author, published_at,url})=>{
 
       </div>
       
-      <div className="w-full md:w-1/2">
-        <div className="block">
         <img 
                     
-                    className="object-fit: contain; h-64 w-full md:h-full md:w-48 "
+                    className=" w-1/2 "
                     src={image}
-                    alt={title}/>
-           
-              
-        </div>
-      </div>
+                    alt={title}/>   
+      
     </div>
     
   </div>

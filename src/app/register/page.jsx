@@ -14,8 +14,6 @@ export default function RegisterPage(){
   const handleSubmit = async (e)=>{
     e.preventDefault()
 
-    
-
     try {
       const formData = new FormData(e.currentTarget)
       
@@ -35,8 +33,6 @@ export default function RegisterPage(){
 
       if (res?.ok) return router.push("/")
 
-
-
     } catch (error) {
       if(error instanceof AxiosError){
         setError(error.response?.data.message)
@@ -46,94 +42,51 @@ export default function RegisterPage(){
   }
 
     return (<>
- <div className="bg-gray-100 flex justify-center items-center h-screen">
+ <div className="flex flex-col justify-center items-center h-screen w-full m-auto px-6 py-12 lg:px-8">
+  <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+    <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight to-blue-500">Sign in to continue</h2>
+  </div>
 
-    {/* <!-- Left: Image --> */}
-
-<div className="w-1/2 h-screen hidden lg:block">
-  <img src="https://placehold.co/800x/667fff/ffffff.png?text=Your+Image&font=Montserrat" alt="Placeholder Image" className="object-cover w-full h-full"/>
-</div>
-
-{/* <!-- Right: Login Form --> */}
-
-<div className=" text-black lg:p-36 md:p-52 sm:20 p-8 w-full lg:w-1/2">
-  <h1 className="text-2xl font-semibold mb-4">Sign Up</h1>
-  <form onSubmit={handleSubmit}>
-  {error && <div
-  className=" bg-red-500 text-white p-2 mb-2"
-  >{error}
+  <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+    <form onSubmit={handleSubmit} className="space-y-6">
+    {error && <div
+      classNameName=" bg-red-500 text-white p-2 mb-2"
+      >{error}
     
     </div>}
 
-    {/* <!-- Username Input --> */}
+      <div>
+        <label for="fullname" className="block text-sm font-medium leading-6 text-balance">fullname</label>
+        <div className="mt-2">
+          <input id="fullname" name="fullname" autoComplete="false" type="text" required className=" pl-2 block w-full rounded-md border-0 bg-white/5 py-1.5 text-cyan-600 shadow-sm ring-1 ring-inset ring-red-500 focus:ring-2 focus:ring-inset focus:ring-balck sm:text-sm sm:leading-6"/>
+        </div>
+      </div>
 
-    <div className="mb-4">
-      <label htmlFor="username" className="block text-gray-600">Fullname</label>
 
-      <input 
-      type="text"
-      placeholder="fullname"
-      id="fullname" 
-      name="fullname" 
-      className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" 
-      autocomplete="off"/>
+      <div>
+        <label for="email" className="block text-sm font-medium leading-6 text-balance">Email address</label>
+        <div className="mt-2">
+          <input id="email" name="email" type="text" autoComplete="false" required className="pl-2 block w-full rounded-md border-0 bg-white/5 py-1.5 text-cyan-600 shadow-sm ring-1 ring-inset ring-red-500 focus:ring-2 focus:ring-inset focus:ring-balck sm:text-sm sm:leading-6"/>
+        </div>
+      </div>
 
-    </div>
+      <div>
+        <label for="password" className="block text-sm font-medium leading-6 text-balance">Password</label>
+        <div className="mt-2">
+          <input id="password" name="password" type="password" autoComplete="false" required className="pl-2 block w-full rounded-md border-0 bg-white/5 py-1.5 text-cyan-600 shadow-sm ring-1 ring-inset ring-red-500 focus:ring-2 focus:ring-inset focus:ring-balck sm:text-sm sm:leading-6"/>
+        </div>
+      </div>
 
-    {/* <!-- email Input --> */}
+      <div>
+        <button type="submit" className="flex w-full justify-center rounded-md bg-red-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-500">Sign in</button>
+      </div>
+    </form>
 
-    <div className="mb-4">
-      <label htmlFor="username" className="block text-gray-600">Email</label>
-
-      <input 
-      type="text" 
-      placeholder="email"
-      id="email" 
-      name="email" 
-      className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" 
-      autocomplete="off"/>
-
-    </div>
-
-    {/* <!-- Password Input --> */}
-
-    <div className="mb-4">
-      <label htmlFor="password" className="block text-gray-600">Password</label>
-
-      <input 
-      type="password"
-      placeholder="password" 
-      id="password" 
-      name="password" 
-      className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" 
-      autocomplete="off"/>
-
-    </div>
-
-    {/* <!-- Remember Me Checkbox --> */}
-
-    {/* <div className="mb-4 flex items-center">
-      <input type="checkbox" id="remember" name="remember" className="text-blue-500"/>
-      <label for="remember" className="text-gray-600 ml-2">Remember Me</label>
-    </div> */}
-
-    {/* <!-- Forgot Password Link --> */}
-
-    {/* <div className="mb-6 text-blue-500">
-      <Link href="#" className="hover:underline">Forgot Password?</Link>
-    </div> */}
-
-    {/* <!-- Login Button --> */}
-
-    <button type="submit" className="bg-red-600 hover:bg-red-700 text-white font-semibold rounded-md py-2 px-4 w-full">Sign Up</button>
-  </form>
-
-  {/* <!-- Sign up  Link --> */}
-
-  <div className="mt-6 text-red-500 text-center">
-    <Link href="/login" className="hover:underline">Log in here </Link>
+    <p className="mt-10 text-center text-sm text-gray-400">
+      Do you have a account here?  
+      <Link href="/login" className="ml-2 font-semibold leading-6 text-red-500 hover:text-red-400">Login here</Link>
+    </p>
   </div>
-</div>
 </div>
     </>)
 }
