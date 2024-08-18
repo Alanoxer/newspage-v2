@@ -11,8 +11,6 @@ export default function Pagination(){
 
     const page = Number(params.pagination)
     
-    
-
     if(params.keyword || params.pagination)return (<>
         
         <div className=" bg-slate-900 flex items-center justify-center h-28">

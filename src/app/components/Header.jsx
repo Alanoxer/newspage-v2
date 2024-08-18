@@ -11,8 +11,6 @@ const Header = ()=>{
    return(<>
   <nav id="header" className="fixed w-full z-30 top-0 text-white  bg-red-600 m-100 mb-5" >
 
-   
-
 <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
 
    <div className="pl-4 flex items-center">

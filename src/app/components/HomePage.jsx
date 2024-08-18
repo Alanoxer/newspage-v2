@@ -1,10 +1,9 @@
 import HomePageCss from "./HomePageCss"
+const { API_KEY } = process.env
 
 const HomePage = async ()=>{
-    const apiKey = '2e4d34f6e8054376a1a94c3a459c3a6f'
 
-
-  const api = `https://newsapi.org/v2/everything?apikey=${apiKey}
+  const api = `https://newsapi.org/v2/everything?apikey=${API_KEY}
   &q=Rusia
   &pageSize=1
   &sortBy=popularity 
