@@ -6,7 +6,7 @@ import { CalendarDays, MapPin, Link as LinkIcon } from "lucide-react"
 export default function ProfilePage(){
     const {data: session, status} = useSession()
 
-    console.log(session.user)
+    console.log(session.user, status)
 
     return (
             <div className="container mx-auto px-4 py-8">
